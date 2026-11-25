@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# video-sharingan CLI wrapper: ./sharingan analyze ref.mp4
+# local patch: on Windows python3 is a Store stub, so fall back to python
+export PYTHONUTF8=1  # Windows: avoid cp1252 errors on ≤ and emoji output
+PY=python3; "$PY" -c "" 2>/dev/null || PY=python
+exec "$PY" "$(cd "$(dirname "$0")" && pwd)/scripts/sharingan.py" "$@"
