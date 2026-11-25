@@ -12,9 +12,25 @@ Skills e um agent para **transcrever vídeos**, **ler quadro a quadro** e **tran
 | `skills/video-sharingan` | Desmonta um vídeo de referência em números (ritmo, motion) e gera guia para recriar. |
 | `skills/rea-video` | Diz, cena por cena, como o vídeo foi feito (gravação real, IA, 3D, animação). |
 | `skills/reverse-any-video` | Refaz o vídeo como projeto editável (HyperFrames) e confere com o original quadro a quadro. |
+| `skills/criar-agent` | Cria um agent (e, se quiser, a skill irmã) a partir da sua ideia: melhora, pergunta o que falta e salva. Use `/criar-agent`. |
 | `agents/clonagem-transcricao.md` | Agent que transcreve uma VSL com timestamps e marca o pitch. |
 
 ## Como instalar
+
+**Jeito fácil:** cole isto no Claude Code:
+
+```
+Instale as skills do repositório https://github.com/smallfiver/claude-skills-video
+
+1. Clone o repositório numa pasta temporária.
+2. Copie cada pasta de skills/ para ~/.claude/skills/ (não apague skills que eu já tenho; se o nome já existir, me pergunte antes).
+3. Copie os arquivos de agents/ para ~/.claude/agents/.
+4. Confira se tenho ffmpeg e Python 3. Instale o que faltar e rode: pip install faster-whisper yt-dlp
+5. Apague a pasta temporária.
+6. No fim, me diga o que foi instalado e o que deu erro.
+```
+
+**Jeito manual:**
 
 1. Baixe este repositório (botão **Code → Download ZIP**, ou `git clone`).
 2. Copie as pastas de `skills/` para `~/.claude/skills/`
